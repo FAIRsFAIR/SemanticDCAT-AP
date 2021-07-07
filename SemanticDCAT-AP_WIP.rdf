@@ -1,0 +1,623 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY dct "http://purl.org/dc/terms/" >
+<!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+<!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+<!ENTITY adms "http://www.w3.org/ns/adms#" >
+<!ENTITY vann "http://purl.org/vocab/vann/" >
+<!ENTITY xhv "http://www.w3.org/1999/xhtml/vocab#">
+<!ENTITY cc "http://creativecommons.org/ns#" >
+<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!ENTITY vcard "http://www.w3.org/2006/vcard/ns#" >
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY sdmx "http://purl.org/linked-data/sdmx#" >
+<!ENTITY qb "http://purl.org/linked-data/cube#" >
+<!ENTITY wdrs "http://www.w3.org/2007/05/powder-s#" >
+<!ENTITY voaf "http://purl.org/vocommons/voaf#" >
+<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+<!ENTITY skosDoc "http://www.w3.org/TR/skos-primer/">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+<!ENTITY documentation "http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579">
+<!ENTITY documentationTitle "DCAT Application Profile for Data Portals in Europe - Final">
+<!ENTITY methodology "https://joinup.ec.europa.eu/document/process-and-methodology-developing-core-vocabularies">
+<!ENTITY methodologyTitle "Process and Methodology for Developing Core Vocabularies">
+<!ENTITY spdx "http://spdx.org/rdf/terms#">
+]>
+
+<!-- ====================================== -->
+<!-- ==  Semantic Artefact - Properties  == -->
+<!-- ====================================== --> 
+<!-- ==       Mandatory Properties       == -->
+<!-- ====================================== --> 
+
+<!--  Semantic Artefact - title  -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/title"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains a name given to the Semantic Artefact. This property can be repeated for parallel language versions of the name.</vann:usageNote>
+  <dct:identifier>dct:title</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - title</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title" />
+  <rdfs:comment xml:lang="en">This property contains a name given to the Semantic Artefact. This property can be repeated for parallel language versions of the name.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - licence   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/license"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to the licence under which the Semantic Artefact can be used or reused.</vann:usageNote>
+  <dct:identifier>dct:license</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - licence</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-license" />
+  <rdfs:comment xml:lang="en">This property refers to the licence under which the Semantic Artefact can be used or reused.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - identifier -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/identifier"> 
+  <vann:usageNote xml:lang="en">Mandatory property. An unambiguous reference to the Semantic Artefact within a given context.</vann:usageNote>
+  <dct:identifier>dct:identifier</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - identifier</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-identifier" />
+  <rdfs:comment xml:lang="en">Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - access rights   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/accessRights"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to information that indicates whether the Semantic Artefact is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</vann:usageNote>
+  <dct:identifier>dct:accessRights</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - access Rights</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-accessRights" />
+  <rdfs:comment xml:lang="en">This property refers to information that indicates whether the Semantic Artefact is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - creator  (dcat 2) -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/creator"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to an entity primarily responsible for making the resource.</vann:usageNote>
+  <dct:identifier>dct:creator</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - creator</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-creator" />
+  <rdfs:comment xml:lang="en">This property refers to an entity primarily responsible for making the dataset.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - created -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/created"> 
+  <vann:usageNote xml:lang="en">Mandatory property. Date of creation of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:created</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - created</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-created" />
+  <rdfs:comment xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - description  -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/description"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains a free-text account of the Semantic Artefact. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+  <dct:identifier>dct:description</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - description</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description" />
+  <rdfs:comment xml:lang="en">This property contains a free-text account of the Semantic Artefact. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - contact point -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#contactPoint"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains contact information that can be used for sending comments about the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dcat:contactPoint</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - contact point</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point" />
+  <rdfs:comment xml:lang="en">This property contains contact information that can be used for sending comments about the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - versionIRI -->
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionIRI"> 
+  <vann:usageNote xml:lang="en">Mandatory property. The property that identifies the version IRI of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>owl:versionIRI</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - version IRI</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#versionIRI" />
+  <rdfs:comment xml:lang="en">The property that identifies the version IRI of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - update/modification date   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/modified"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains the most recent date on which the Semantic Artefact was changed or modified.</vann:usageNote>
+  <dct:identifier>dct:modified</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - update/ modification date</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified" />
+  <rdfs:comment xml:lang="en">This property contains the most recent date on which the Semantic Artefact was changed or modified.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - keyword/ tag  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#keyword"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains a keyword or tag describing the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dcat:keyword</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - keyword/ tag</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword" />
+  <rdfs:comment xml:lang="en">This property contains a keyword or tag describing the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - acronym  -->
+<rdf:Description rdf:about="http://www.isibang.ac.in/ns/mod/1.1/acronym"> 
+  <vann:usageNote xml:lang="en">Mandatory property. A short name by which the Semantic Artefact is formally known.</vann:usageNote>
+  <dct:identifier>mod:acronym</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - landing page</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.isibang.ac.in/ns/mod/1.1/acronym" />
+  <rdfs:comment xml:lang="en">A short name by which an ontology is formally known.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - landing page   -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#landingPage"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to a web page that provides access to the Semantic Artefact, its Distributions and/or additional information.</vann:usageNote>
+  <dct:identifier>dcat:landingPage</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - landing page</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page" />
+  <rdfs:comment xml:lang="en">This property refers to a web page that provides access to the Semantic Artefact, its Distributions and/or additional information.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - subject -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/subject"> 
+  <vann:usageNote xml:lang="en">Mandatory property. A topic of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:subject</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - subject</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/subject" />
+  <rdfs:comment xml:lang="en">Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - type   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/type"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to the type of the Semantic Artefact. A controlled vocabulary for the values has not been established.</vann:usageNote>
+  <dct:identifier>dct:type</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - type</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-type" />
+  <rdfs:comment xml:lang="en">This property refers to the type of the Semantic Artefact. A controlled vocabulary for the values has not been established.</rdfs:comment>
+</rdf:Description> 
+
+<!--  Semantic Artefact - release date   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/issued"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains the date of formal issuance (e.g., publication) of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:issued</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - release date</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued" />
+  <rdfs:comment xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#theme"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to a category of the Semantic Artefact. A Semantic Artefact may be associated with multiple themes. Subproperty of dct:subject.</vann:usageNote>
+  <dct:identifier>dcat:theme</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - theme/category</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type" />
+  <rdfs:comment xml:lang="en">This property refers to a category of the Semantic Artefact. A Semantic Artefact may be associated with multiple themes. Subproperty of dct:subject</rdfs:comment>
+</rdf:Description>
+
+<!-- ============================ -->
+<!-- Recommended properties       -->
+<!-- ============================ -->
+
+<!--  Semantic Artefact - publisher  -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/publisher"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to an entity (organisation) responsible for making the Semantic Artefact available.</vann:usageNote>
+  <dct:identifier>dct:publisher</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - publisher</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-publisher" />
+  <rdfs:comment xml:lang="en">This property refers to an entity (organisation) responsible for making the Semantic Artefact available.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - conforms to  -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to an implementing rule or other specification.</vann:usageNote>
+  <dct:identifier>dct:conformsTo</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - conforms to</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-conformsTo" />
+  <rdfs:comment xml:lang="en">This property refers to an implementing rule or other specification.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - language   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/language"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to a language of the Semantic Artefact. This property can be repeated if there are multiple languages in the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:language</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - language</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-language" />
+  <rdfs:comment xml:lang="en">This property refers to a language of the Semantic Artefact. This property can be repeated if there are multiple languages in the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - dataset distribution  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#distribution"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property links the Semantic Artefact to an available Distribution.</vann:usageNote>
+  <dct:identifier>dcat:distribution</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - dataset distribution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution" />
+  <rdfs:comment xml:lang="en">This property links the Semantic Artefact to an available Distribution.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - contributor -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/contributor"> 
+  <vann:usageNote xml:lang="en">Recommended property. An entity responsible for making contributions to the resource.</vann:usageNote>
+  <dct:identifier>dct:contributor</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - contributor</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/contributor/" />
+  <rdfs:comment xml:lang="en">The guidelines for using names of persons or organizations as creators apply to contributors.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - rights -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/rights"> 
+  <vann:usageNote xml:lang="en">Recommended property. A statement that concerns all rights not addressed with dct:license or dct:accessRights, such as copyright statements.</vann:usageNote>
+  <dct:identifier>dct:rights</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - rights</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/rights" />
+  <rdfs:comment xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights. Recommended practice is to refer to a rights statement with a URI. If this is not possible or feasible, a literal value (name, label, or short text) may be provided.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - status -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#status"> 
+  <vann:usageNote xml:lang="en">Recommended property. The tracking information for the contents of the ontology.</vann:usageNote>
+  <dct:identifier>mod:status</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - status</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#status" />
+  <rdfs:comment xml:lang="en">The tracking information for the contents of the ontology.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - used ontology engineering methodology -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology"> 
+  <vann:usageNote xml:lang="en">Recommended property. A methodolgy following which the Semantic Artefact is created.</vann:usageNote>
+  <dct:identifier>mod:usedOntologyEngineeringMethodology</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - used ontology engineering methodology</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringMethodology" />
+  <rdfs:comment xml:lang="en">A methodolgy following which the Semantic Artefact is created.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - has formality level -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel"> 
+  <vann:usageNote xml:lang="en">Recommended property. The level of formality of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>mod:usedOntologyEngineeringMethodology</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - used ontology engineering methodology</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasFormalityLevel" />
+  <rdfs:comment xml:lang="en">The level of formality of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - accrual method -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/accrualMethod"> 
+  <vann:usageNote xml:lang="en">Recommended property. The method by which items are added to the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:accrualMethod</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - accrual method</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/accrualMethod" />
+  <rdfs:comment xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary <a href="https://dublincore.org/groups/collections/accrual-method">[DCMI-ACCRUALMETHOD]</a>.</rdfs:comment>
+</rdf:Description>
+
+<!-- ====================================== --> 
+<!--         Optional properties            -->
+<!-- ====================================== --> 
+
+<!--  Semantic Artefact - temporal coverage   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/temporal"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to a temporal period that the Semantic Artefact covers.</vann:usageNote>
+  <dct:identifier>dct:temporal</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - temporal coverage</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-temporal" />
+  <rdfs:comment xml:lang="en">This property refers to a temporal period that the Semantic Artefact covers.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - qualified Relation   (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#qualifiedRelation"> 
+  <vann:usageNote xml:lang="en">Optional property. This property provides a link to a description of a relationship with another resource.</vann:usageNote>
+  <dct:identifier>dcat:qualifiedRelation</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - qualified relation</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation" />
+  <rdfs:comment xml:lang="en">This property provides a link to a description of a relationship with another resource.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - has policy -->
+<rdf:Description rdf:about="https://www.w3.org/TR/odrl-vocab/#term-Policy"> 
+  <vann:usageNote xml:lang="en">Optional property. Identifies an ODRL Policy for which the identified Asset is the target Asset to all the Rules.</vann:usageNote>
+  <dct:identifier>odrl:hasPolicy</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - has policy</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy" />
+  <rdfs:comment xml:lang="en">Identifies an ODRL Policy for which the identified Asset is the target Asset to all the Rules.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - qualified attribution   (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#qualifiedAttribution"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the link to an Agent having some form of responsibility for the resource.</vann:usageNote>
+  <dct:identifier>prov:qualifiedAttribution</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - qualified attribution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedAttribution" />
+  <rdfs:comment xml:lang="en">This property refers to the link to an Agent having some form of responsibility for the resource.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  -  was generated by  (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to an activity that generated, or provides the business context for, the creation of the dataset.</vann:usageNote>
+  <dct:identifier> prov:wasGeneratedBy</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - was generated by</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy" />
+  <rdfs:comment xml:lang="en">This property refers to an activity that generated, or provides the business context for, the creation of the dataset.</rdfs:comment>
+</rdf:Description>
+
+<!-- Relationship -  relation  (dcat 2) -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/relation"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the resource related to the source resource.</vann:usageNote>
+  <dct:identifier>dct:relation</dct:identifier>
+  <rdfs:label xml:lang="en">Relationship - relation</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource= "https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_relation" /> 
+  <rdfs:comment xml:lang="en">This property refers to the resource related to the source resource.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - is reference by   (dcat 2) -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/isReferencedBy"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to a related resource, such as a publication, that references, cites, or otherwise points to the dataset.</vann:usageNote>
+  <dct:identifier>dct:isReferencedBy</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - is referenced By</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_is_referenced_by" />
+  <rdfs:comment xml:lang="en">This property refers to a related resource, such as a publication, that references, cites, or otherwise points to the dataset.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  - competency question -->
+<rdf:Description rdf:about="http://www.isibang.ac.in/ns/mod#competencyQuestion"> 
+  <vann:usageNote xml:lang="en">Optional property. A set of questions made to build the Semantic Artefact at the design time.</vann:usageNote>
+  <dct:identifier>mod:competencyQuestion</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - competency question</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.isibang.ac.in/ns/mod#competencyQuestion" />
+  <rdfs:comment xml:lang="en">A set of questions made to build the Semantic Artefact at the design time.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - frequency   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/acrualPeriodicity"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the frequency at which Semantic Artefact is updated.</vann:usageNote>
+  <dct:identifier>dct:accrualPeriodicity</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - frequency</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-acrualPeriodicity" />
+  <rdfs:comment xml:lang="en">This property refers to the frequency at which Semantic Artefact is updated.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact - spatial/geographic   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/spatial"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to a geographical area covered by the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dct:spatial</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - spatial / geographic</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-spatial" />
+  <rdfs:comment xml:lang="en">This property refers to a geographical area covered by the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Semantic Artefact  -  temporal resolution (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset.</vann:usageNote>
+  <dct:identifier>dcat:temporalResolution</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - temporal resolution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution" />
+  <rdfs:comment xml:lang="en">This property refers to the minimum time period resolvable in the dataset.</rdfs:comment>
+</rdf:Description>
+
+<!--   Semantic Artefact -  spatial resolution   (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</vann:usageNote>
+  <dct:identifier>dcat:spatialResolutionInMeters</dct:identifier>
+  <rdfs:label xml:lang="en">Semantic Artefact - spatial resolution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_spatial_resolution" />
+  <rdfs:comment xml:lang="en">This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</rdfs:comment>
+</rdf:Description>
+
+<!-- ====================================== -->
+<!-- ==       Distribution - Properties  == -->
+<!-- ====================================== --> 
+<!-- ==       Mandatory Properties       == -->
+<!-- ====================================== --> 
+
+<!--  Distribution - media type   -->
+<!-- the subproperty is not defined, do we do this? -->
+<!-- Answer to BW: you mean the superproperty is not defined? yes it is ok as long as you do not use it. as it is not used in the model it should not be in the model, otherwise someone may use it -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/mediaType"> 
+  <vann:usageNote xml:lang="en">Mandatory property. Subproperty of dct:format. This property refers to the media type of the Distribution if this is defined in IANA.</vann:usageNote>
+  <dct:identifier>dcat:mediaType</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - media type</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-mediaType" />
+  <rdfs:comment xml:lang="en">This property refers to the media type of the Distribution if this is defined in IANA.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - format   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/format"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property refers to the file format of the Distribution.</vann:usageNote>
+  <dct:identifier>dct:format</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-format" />
+  <rdfs:comment xml:lang="en">This property refers to the file format of the Distribution.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - title   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/title"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+  <dct:identifier>dct:title</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - title</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title" />
+  <rdfs:comment xml:lang="en">This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - access URL   -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL"> 
+  <vann:usageNote xml:lang="en">Mandatory property. This property contains a URL that gives access to a Distribution of the Semantic Artefact. The resource at the access URL may contain information about how to get the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>dcat:accessURL</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - access URL</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url" />
+  <rdfs:comment xml:lang="en">This property contains a URL that gives access to a Distribution of the Semantic Artefact. The resource at the access URL may contain information about how to get the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - has ontology language -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage"> 
+  <vann:usageNote xml:lang="en">Mandatory property. A language that is used to create the Distribution of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>mod:hasOntologyLanguage</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - has ontology language</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologyLanguage" />
+  <rdfs:comment xml:lang="en"> A language that is used to create the Distribution of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - has ontology syntax -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax"> 
+  <vann:usageNote xml:lang="en">Mandatory property. The syntax followed in the creation of the Distribution of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>mod:hasOntologySyntax</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - has ontology syntax</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasOntologySyntax" />
+  <rdfs:comment xml:lang="en">The syntax followed in the creation of the Distribution of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - access rights -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/accessRigths"> 
+  <vann:usageNote xml:lang="en">Mandatory property. Information about who can access the Distribution of the Semantic Artefact or an indication of its security status.</vann:usageNote>
+  <dct:identifier>dct:accessRights</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - access rights</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/accessRights" />
+  <rdfs:comment xml:lang="en">This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+</rdf:Description>
+
+<!-- ====================================== --> 
+<!-- ==       Recommended Properties     == -->
+<!-- ====================================== --> 
+
+<!--  Distribution - download URL   -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#downloadURL"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property contains a URL that is direct link to a downloadable file in a given format.</vann:usageNote>
+  <dct:identifier>dcat:downloadURL</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - download URL</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url" />
+  <rdfs:comment xml:lang="en">This property contains a URL that is direct link to a downloadable file in a given format.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - rights   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/rights"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to a statement that specifies rights associated with the Distribution.</vann:usageNote>
+  <dct:identifier>dct:rights</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - rights</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-rights" />
+  <rdfs:comment xml:lang="en">This property refers to a statement that specifies rights associated with the Distribution.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - description   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/description"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+  <dct:identifier>dct:description</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - description</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description" />
+  <rdfs:comment xml:lang="en">This property can be repeated for parallel language versions of the description.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - release date   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/issued"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property contains the date of formal issuance (e.g., publication) of the Distribution.</vann:usageNote>
+  <dct:identifier>dct:issued</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - release date</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued" />
+  <rdfs:comment xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Distribution.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - update/modification date   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/modified"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property contains the most recent date on which the Distribution was changed or modified.</vann:usageNote>
+  <dct:identifier>dct:modified</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - update/modification date</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified" />
+  <rdfs:comment xml:lang="en">This property contains the most recent date on which the Distribution was changed or modified.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - definition property -->
+<rdf:Description rdf:about="http://www.isibang.ac.in/ns/mod#definitionProperty"> 
+  <vann:usageNote xml:lang="en">Recommended property. Property used to specify the definition of a class (BioPortal definition).</vann:usageNote>
+  <dct:identifier>mod:definitionProperty</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - definition property</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.isibang.ac.in/ns/mod#definitionProperty" />
+  <rdfs:comment xml:lang="en">Property used to specify the definition of a class (BioPortal definition).</rdfs:comment>
+</rdf:Description>
+
+<!--   Distribution -  access service  (dcat 2)  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessService"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to a data service that gives access to the distribution of the dataset.</vann:usageNote>
+  <dct:identifier>dcat:accessService</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - access service</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service" />
+  <rdfs:comment xml:lang="en">This property refers to the a data service that gives access to the distribution of the dataset .</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - conforms to   -->
+<rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to an established schema to which the described Distribution conforms.</vann:usageNote>
+  <dct:identifier>dct:conformsTo</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - linked schemas</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-conformsTo" />
+  <rdfs:comment xml:lang="en">This property refers to an established schema to which the described Distribution conforms.</rdfs:comment> 
+</rdf:Description>
+
+<!--  Distribution - pref label property   -->
+<rdf:Description rdf:about=" http://www.isibang.ac.in/ns/mod#prefLabelProperty"> 
+  <vann:usageNote xml:lang="en">Recommended property. Property used to specify preferred name of the Distribution of the Semantic Artefact (BioPortal definition).</vann:usageNote>
+  <dct:identifier>mod:prefLabelProperty</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - pref label property</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.isibang.ac.in/ns/mod#prefLabelProperty" />
+  <rdfs:comment xml:lang="en">Property used to specify preferred name of the Distribution of the Semantic Artefact (BioPortal definition).</rdfs:comment> 
+</rdf:Description>
+
+<!--  Distribution - synonym property property   -->
+<rdf:Description rdf:about=" http://www.isibang.ac.in/ns/mod#synonymProperty"> 
+  <vann:usageNote xml:lang="en">Recommended property. Property used to specify synonyms of the Distribution of the Semantic Artefact (BioPortal definition).</vann:usageNote>
+  <dct:identifier>mod:synonymProperty</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - synonym property property</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://www.isibang.ac.in/ns/mod#synonymProperty" />
+  <rdfs:comment xml:lang="en">Property used to specify synonyms of the Distribution of the Semantic Artefact (BioPortal definition).</rdfs:comment> 
+</rdf:Description>
+
+<!--  Distribution -  has policy  (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy"> 
+  <vann:usageNote xml:lang="en">Recommended property. This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary.</vann:usageNote>
+  <dct:identifier>odrl:hasPolicy</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - has policy</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_has_policy" />
+  <rdfs:comment xml:lang="en">This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary.</rdfs:comment>
+</rdf:Description>
+
+<!-- ====================================== --> 
+<!-- ==       Optional Properties        == -->
+<!-- ====================================== --> 
+
+<!--   Distribution - packaging format   (dcat 2)  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#packageFormat"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.</vann:usageNote>
+  <dct:identifier>dcat:packageFormat</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - packaging format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format" />
+  <rdfs:comment xml:lang="en">This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.</rdfs:comment>
+</rdf:Description>
+
+<!--   Distribution - used ontology engineering tool -->
+<rdf:Description rdf:about="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool"> 
+  <vann:usageNote xml:lang="en">Optional property. The tool used for the creation of the Distribution of the Semantic Artefact.</vann:usageNote>
+  <dct:identifier>mod:usedOntologyEngineeringTool</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - used ontology engineering tool</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#usedOntologyEngineeringTool" />
+  <rdfs:comment xml:lang="en">The tool used for the creation of the Distribution of the Semantic Artefact.</rdfs:comment>
+</rdf:Description>
+
+<!--   Distribution -  compression format  (dcat 2)  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#compressFormat"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.</vann:usageNote>
+  <dct:identifier>dcat:compressFormat</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - compression format</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format" />
+  <rdfs:comment xml:lang="en">This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.</rdfs:comment>
+</rdf:Description>
+
+<!--   Distribution -  temporal resolution  (dcat 2)  -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset distribution.</vann:usageNote>
+  <dct:identifier>dcat:temporalResolution</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - temporal resolution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_temporal_resolution" />
+  <rdfs:comment xml:lang="en">This property refers to the minimum time period resolvable in the dataset distribution.</rdfs:comment>
+</rdf:Description>
+
+<!--  Distribution - byte size   -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#byteSize"> 
+  <vann:usageNote xml:lang="en">Optional property. This property contains the size of a Distribution in bytes.</vann:usageNote>
+  <dct:identifier>dcat:byteSize</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - byte size</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size" />
+  <rdfs:comment xml:lang="en">This property contains the size of a Distribution in bytes.</rdfs:comment>
+</rdf:Description>
+
+<!--   Distribution -  spatial resolution   (dcat 2) -->
+<rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> 
+  <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</vann:usageNote>
+  <dct:identifier>dcat:spatialResolutionInMeters</dct:identifier>
+  <rdfs:label xml:lang="en">Distribution - spatial resolution</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_spatial_resolution" />
+  <rdfs:comment xml:lang="en">This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</rdfs:comment>
+</rdf:Description>
+
