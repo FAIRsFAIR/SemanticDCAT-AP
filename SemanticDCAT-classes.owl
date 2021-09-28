@@ -1,0 +1,1303 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rob/ontologies/2021/7/untitled-ontology-20#"
+     xml:base="http://www.semanticweb.org/rob/ontologies/2021/7/untitled-ontology-20"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mod="http://www.isibang.ac.in/ns/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:semanticDCAT="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT">
+        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+        <rdfs:label>DCAT Profile for Semantic Artefacts</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccessRights -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccessRights">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/accessRights"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact access rights</rdfs:comment>
+        <rdfs:label>access rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccrualMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccrualMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/accrualMethod"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact accrual method</rdfs:comment>
+        <rdfs:label>accrual method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccrualPeriodicity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAccrualPeriodicity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact accrual periodicity</rdfs:comment>
+        <rdfs:label>accrual periodicity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAcronym -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAcronym">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#acronym"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact acronym</rdfs:comment>
+        <rdfs:label>acronym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCompentencyQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCompentencyQuestion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#competencyQuestion"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact competency question</rdfs:comment>
+        <rdfs:label>competency question</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactConformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactConformsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact conforms to</rdfs:comment>
+        <rdfs:label>conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactContactPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactContactPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#contactPoint"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact contact point</rdfs:comment>
+        <rdfs:label>contact point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactContributor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactContributor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/contributor"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact contributor</rdfs:comment>
+        <rdfs:label>contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCreated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCreated">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/created"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact date created</rdfs:comment>
+        <rdfs:label>date created</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCreator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCreator">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/creator"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact creator</rdfs:comment>
+        <rdfs:label>creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact description</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution</rdfs:comment>
+        <rdfs:label>distribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessRights -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessRights">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/accessRights"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution access rights</rdfs:comment>
+        <rdfs:label>access rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessService">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#accessService"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution access service</rdfs:comment>
+        <rdfs:label>access service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionAccessURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution access URL</rdfs:comment>
+        <rdfs:label>access URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionByteSize -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionByteSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#byteSize"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution byte size</rdfs:comment>
+        <rdfs:label>byte size</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionCompressFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionCompressFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#compressFormat"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution compression format</rdfs:comment>
+        <rdfs:label>compression format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionConformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionConformsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution conforms to</rdfs:comment>
+        <rdfs:label>conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#definitionProperty"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution definition property</rdfs:comment>
+        <rdfs:label>definition property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/description"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution description</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDownloadURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDownloadURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution download URL</rdfs:comment>
+        <rdfs:label>download URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/format"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution format</rdfs:comment>
+        <rdfs:label>format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologyLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologyLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasOntologyLanguage"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution has ontology language</rdfs:comment>
+        <rdfs:label>has ontology language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologySyntax -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologySyntax">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasOntologySyntax"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution has ontology syntax</rdfs:comment>
+        <rdfs:label>has ontology syntax</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution has policy</rdfs:comment>
+        <rdfs:label>has policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionIssued -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionIssued">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/issued"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution date issued</rdfs:comment>
+        <rdfs:label>date issued</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionMediaType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionMediaType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#mediaType"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution media type</rdfs:comment>
+        <rdfs:label>media type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionModified -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionModified">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/modified"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution date modified</rdfs:comment>
+        <rdfs:label>date modified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionPackageFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionPackageFormat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#packageFormat"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution package format</rdfs:comment>
+        <rdfs:label>package format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionPrefLabelProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionPrefLabelProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#prefLabelProperty"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution preferred name</rdfs:comment>
+        <rdfs:label>preferred name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:label>semantic artefact distribution property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionRights -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionRights">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/rights"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution rights</rdfs:comment>
+        <rdfs:label>rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionSpatialResolutionInMeters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionSpatialResolutionInMeters">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution spatial resolution in meters</rdfs:comment>
+        <rdfs:label>spatial resolution in meters</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionSynonymProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionSynonymProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#synonymProperty"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact distribution synonym</rdfs:comment>
+        <rdfs:label>synonym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionTemporalResolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionTemporalResolution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#temporalResolution"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution temporal resolution</rdfs:comment>
+        <rdfs:label>temporal resolution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/title"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact distribution title</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionUsedOntologyEngineeringTool -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionUsedOntologyEngineeringTool">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact distribution used ontology engineering tool</rdfs:comment>
+        <rdfs:label>used ontology engineering tool</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactHasFormalityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactHasFormalityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasFormalityLevel"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact has formality level</rdfs:comment>
+        <rdfs:label>has formality level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactHasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactHasPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact has policy</rdfs:comment>
+        <rdfs:label>has policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIdentifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact identifier</rdfs:comment>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIncludedInDataCatalog -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIncludedInDataCatalog">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://schema.org/includedInDataCatalog"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact included in data catalog</rdfs:comment>
+        <rdfs:label>included in data catalog</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIsReferencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIsReferencedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact is referenced by</rdfs:comment>
+        <rdfs:label>is referenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIssued -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactIssued">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/issued"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact date issued</rdfs:comment>
+        <rdfs:label>date issued</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactKeyword -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactKeyword">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#keyword"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact keyword</rdfs:comment>
+        <rdfs:label>keyword</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLandingPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLandingPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#landingPage"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact landing page</rdfs:comment>
+        <rdfs:label>landing page</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/language"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact language</rdfs:comment>
+        <rdfs:label>language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLicense -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactLicense">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/license"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact license</rdfs:comment>
+        <rdfs:label>license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactModified -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactModified">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/modified"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact date modified</rdfs:comment>
+        <rdfs:label>date modified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:label>semantic artefact property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactPublisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact publisher</rdfs:comment>
+        <rdfs:label>publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactQualifiedAttribution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactQualifiedAttribution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#qualifiedAttribution"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact qualified attribution</rdfs:comment>
+        <rdfs:label>qualified attribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactRights -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactRights">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/rights"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact rights</rdfs:comment>
+        <rdfs:label>rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSpatial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSpatial">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact spatial coverage</rdfs:comment>
+        <rdfs:label>spatial coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSpatialResolutionInMeters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSpatialResolutionInMeters">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact spatial resolution in meters</rdfs:comment>
+        <rdfs:label>spatial resolution in meters</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#status"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact status</rdfs:comment>
+        <rdfs:label>status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactSubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/subject"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact subject</rdfs:comment>
+        <rdfs:label>subject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTemporal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTemporal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact temporal</rdfs:comment>
+        <rdfs:label>temporal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTemporalResolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTemporalResolution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#temporalResolution"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact temporal resolution</rdfs:comment>
+        <rdfs:label>temporal resolution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTheme">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#theme"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact theme</rdfs:comment>
+        <rdfs:label>theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/title"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact title</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/type"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact type</rdfs:comment>
+        <rdfs:label>type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactURI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactURI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#URI"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact URI</rdfs:comment>
+        <rdfs:label>URI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedOntologyEngineeringMethodology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedOntologyEngineeringMethodology">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        <rdfs:comment>semantic artefact used ontology engineering methodology</rdfs:comment>
+        <rdfs:label>used ontology engineering methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactVersionIRI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactVersionIRI">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#versionIRI"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+        <rdfs:comment>semantic artefact version IRI</rdfs:comment>
+        <rdfs:label>version IRI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactWasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactWasGeneratedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+        <rdfs:comment>semantic artefact was generated by</rdfs:comment>
+        <rdfs:label>was generated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:Class rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/accessRights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualMethod -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/accrualMethod"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/conformsTo"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/isReferencedBy"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/spatial"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/temporal"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/type"/>
+    
+
+
+    <!-- http://schema.org/includedInDataCatalog -->
+
+    <owl:Class rdf:about="http://schema.org/includedInDataCatalog"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#URI -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#URI"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#acronym -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#acronym"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#competencyQuestion -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#competencyQuestion"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#definitionProperty -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#definitionProperty"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#hasFormalityLevel -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasFormalityLevel"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#hasOntologyLanguage -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasOntologyLanguage"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#hasOntologySyntax -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasOntologySyntax"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#hasSyntax -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasSyntax"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#prefLabelProperty -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#prefLabelProperty"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#status -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#status"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#synonymProperty -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#synonymProperty"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology"/>
+    
+
+
+    <!-- http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool -->
+
+    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:label>Semantic Artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:comment>Semantic Artefact Distribution</rdfs:comment>
+        <rdfs:label>Distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessService -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#accessService"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#accessURL"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#byteSize"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#compressFormat -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#compressFormat"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#contactPoint"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#downloadURL"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#keyword"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#landingPage"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#mediaType"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#packageFormat -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#packageFormat"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#temporalResolution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#temporalResolution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#theme"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#qualifiedAttribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#qualifiedAttribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement"/>
+        <rdfs:label>Mandatory</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement"/>
+        <rdfs:label>Optional</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Endorsement"/>
+        <rdfs:label>Recommended</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
