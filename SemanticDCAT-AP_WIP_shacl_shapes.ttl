@@ -20,6 +20,9 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcatap: <http://data.europa.eu/r5r> .
+@prefix dash: <http://datashapes.org/dash#> .
+#TODO: get the correct MOD URI
+@prefix mod: <http://MODURI#> .
 
 # TODO:
 
@@ -74,6 +77,54 @@
 #        foaf:name "DCAT-AP Working Group" ;
 #        foaf:page <https://github.com/SEMICeu/DCAT-AP>, <https://joinup.ec.europa.eu/node/64331>
 #    ] .
+
+:SemanticArtefact_Shape
+    a sh:NodeShape;
+    sh:targetClass mod:SemanticArtefact;
+    sh:name "Semantic Artefact"@en;
+    sh:property [
+        sh:path mod:acronym;
+        sh:nodeKind sh:Literal;
+        dash:editor dash:TextFieldEditor;
+        sh:name "Acronym"@en;
+    ], [
+        sh:path mod:URI;
+        sh:nodeKind sh:IRI;
+        sh:minCount 1;
+        sh:maxCount 1;
+        dash:editor dash:URIEditor;
+        dash:viewer dash:LabelViewer;
+        sh:name "URI"@en;
+    ], [
+        sh:path mod:status;
+        sh:nodeKind #TODO check the range of the mod:status
+        sh:name "Status"@en;
+    ], [
+        sh:path mod:hasFormalityLevel;
+        sh:nodeKind ; #TODO check the range of the mod:hasFormalityLevel
+        sh:name "Formality level"@en;
+    ],[
+        sh:path mod:competencyQuestion;
+        sh:nodeKind ; #TODO check the range of the mod:competencyQuestion
+        sh:name "Competency question"@en;
+    ], [
+        sh:path mod:usedEngineeringMethodology;
+        sh:nodeKind ; #TODO check the range of the mod:usedEngineeringMethodology
+        sh:name "Engineering methodology"@en;
+    ], [
+        sh:path dct:contributor;
+        sh:node :Agent_Shape;
+        dash:editor dash:BlankNodeEditor;
+        sh:name "Contributor"@en;
+    ], [
+        sh:path owl:versionIRI;
+        sh:nodeKind sh:IRI;
+        sh:minCount 1;
+        sh:maxCount 1;
+        dash:editor dash:URIEditor;
+        dash:viewer dash:LabelViewer;
+        sh:name "Version"@en;
+    ] .
 
 :Agent_Shape
     a sh:NodeShape ;
