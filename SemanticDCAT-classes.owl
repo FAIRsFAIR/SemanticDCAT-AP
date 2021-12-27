@@ -18,6 +18,7 @@
      xmlns:schema="http://schema.org/"
      xmlns:semanticDCAT="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT">
+        <owl:imports rdf:resource="http://purl.org/pav/2.3"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
         <rdfs:label>DCAT Profile for Semantic Artefacts</rdfs:label>
     </owl:Ontology>
@@ -96,7 +97,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactAcronym">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#acronym"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#acronym"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
         <rdfs:comment>semantic artefact acronym</rdfs:comment>
         <rdfs:label>acronym</rdfs:label>
@@ -109,7 +110,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactCompentencyQuestion">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#competencyQuestion"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#competencyQuestion"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
         <rdfs:comment>semantic artefact competency question</rdfs:comment>
         <rdfs:label>competency question</rdfs:label>
@@ -286,12 +287,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionCreatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionCreatedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://purl.org/pav/createdWith"/>
+        <rdfs:comment>semantic artefact distribution created with</rdfs:comment>
+        <rdfs:label>created with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionDefinitionProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#definitionProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#definitionProperty"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
         <rdfs:comment>semantic artefact distribution definition property</rdfs:comment>
         <rdfs:label>definition property</rdfs:label>
@@ -343,10 +356,10 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologyLanguage">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasOntologyLanguage"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#hasRepresentationLanguage"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
-        <rdfs:comment>semantic artefact distribution has ontology language</rdfs:comment>
-        <rdfs:label>has ontology language</rdfs:label>
+        <rdfs:comment>semantic artefact distribution has representation language</rdfs:comment>
+        <rdfs:label>has representation language</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -356,7 +369,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionHasOntologySyntax">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasOntologySyntax"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#hasSyntax"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Mandatory"/>
         <rdfs:comment>semantic artefact distribution has ontology syntax</rdfs:comment>
         <rdfs:label>has ontology syntax</rdfs:label>
@@ -434,7 +447,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionPrefLabelProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#prefLabelProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#prefLabelPropert"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
         <rdfs:comment>semantic artefact distribution preferred name</rdfs:comment>
         <rdfs:label>preferred name</rdfs:label>
@@ -482,7 +495,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionSynonymProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#synonymProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#synonymProperty"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
         <rdfs:comment>semantic artefact distribution synonym</rdfs:comment>
         <rdfs:label>synonym</rdfs:label>
@@ -521,7 +534,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionUsedOntologyEngineeringTool">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefactDistribution"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool"/>
+        <rdfs:range rdf:resource="http://purl.org/pav/createdWith"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
         <rdfs:comment>semantic artefact distribution used ontology engineering tool</rdfs:comment>
         <rdfs:label>used ontology engineering tool</rdfs:label>
@@ -534,7 +547,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactHasFormalityLevel">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#hasFormalityLevel"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#hasFormalityLevel"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
         <rdfs:comment>semantic artefact has formality level</rdfs:comment>
         <rdfs:label>has formality level</rdfs:label>
@@ -749,7 +762,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactStatus">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#status"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#status"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
         <rdfs:comment>semantic artefact status</rdfs:comment>
         <rdfs:label>status</rdfs:label>
@@ -840,7 +853,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactURI">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#URI"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#URI"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Optional"/>
         <rdfs:comment>semantic artefact URI</rdfs:comment>
         <rdfs:label>URI</rdfs:label>
@@ -848,15 +861,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedOntologyEngineeringMethodology -->
+    <!-- http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedEngineeringMethodology -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedOntologyEngineeringMethodology">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactUsedEngineeringMethodology">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#SemanticArtefact"/>
-        <rdfs:range rdf:resource="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#usedEngineeringMethodology"/>
         <semanticDCAT:Endorsement rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#Recommended"/>
-        <rdfs:comment>semantic artefact used ontology engineering methodology</rdfs:comment>
-        <rdfs:label>used ontology engineering methodology</rdfs:label>
+        <rdfs:comment>semantic artefact used engineering methodology</rdfs:comment>
+        <rdfs:label>used engineering methodology</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -884,6 +897,14 @@
         <rdfs:comment>semantic artefact was generated by</rdfs:comment>
         <rdfs:label>was generated by</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/rob/ontologies/2021/7/semanticDCAT#semanticArtefactDistributionProperty"/>
+    </rdf:Description>
     
 
 
@@ -1030,87 +1051,15 @@
     
 
 
+    <!-- http://purl.org/pav/createdWith -->
+
+    <owl:Class rdf:about="http://purl.org/pav/createdWith"/>
+    
+
+
     <!-- http://schema.org/includedInDataCatalog -->
 
     <owl:Class rdf:about="http://schema.org/includedInDataCatalog"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#URI -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#URI"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#acronym -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#acronym"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#competencyQuestion -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#competencyQuestion"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#definitionProperty -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#definitionProperty"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#hasFormalityLevel -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasFormalityLevel"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#hasOntologyLanguage -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasOntologyLanguage"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#hasOntologySyntax -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasOntologySyntax"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#hasSyntax -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#hasSyntax"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#prefLabelProperty -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#prefLabelProperty"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#status -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#status"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#synonymProperty -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#synonymProperty"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringMethodology"/>
-    
-
-
-    <!-- http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool -->
-
-    <owl:Class rdf:about="http://www.isibang.ac.in/ns/mod#usedOntologyEngineeringTool"/>
     
 
 
@@ -1238,6 +1187,72 @@
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    
+
+
+    <!-- https://w3id.org/mod#URI -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#URI"/>
+    
+
+
+    <!-- https://w3id.org/mod#acronym -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#acronym"/>
+    
+
+
+    <!-- https://w3id.org/mod#competencyQuestion -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#competencyQuestion"/>
+    
+
+
+    <!-- https://w3id.org/mod#definitionProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#definitionProperty"/>
+    
+
+
+    <!-- https://w3id.org/mod#hasFormalityLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#hasFormalityLevel"/>
+    
+
+
+    <!-- https://w3id.org/mod#hasRepresentationLanguage -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#hasRepresentationLanguage"/>
+    
+
+
+    <!-- https://w3id.org/mod#hasSyntax -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#hasSyntax"/>
+    
+
+
+    <!-- https://w3id.org/mod#prefLabelPropert -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#prefLabelPropert"/>
+    
+
+
+    <!-- https://w3id.org/mod#status -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#status"/>
+    
+
+
+    <!-- https://w3id.org/mod#synonymProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#synonymProperty"/>
+    
+
+
+    <!-- https://w3id.org/mod#usedEngineeringMethodology -->
+
+    <owl:Class rdf:about="https://w3id.org/mod#usedEngineeringMethodology"/>
     
 
 
