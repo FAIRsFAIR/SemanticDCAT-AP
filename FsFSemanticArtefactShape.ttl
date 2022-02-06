@@ -1,3 +1,4 @@
+@prefix semdcat:  <http://purl.org/semdcat> .
 @prefix dash:     <http://datashapes.org/dash#> .
 @prefix dcat:     <http://www.w3.org/ns/dcat#> .
 @prefix dct:      <http://purl.org/dc/terms/> .
@@ -11,119 +12,424 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 
-mod:FsFSemanticArtefactShape a sh:NodeShape ;
-  sh:targetClass mod:SemanticArtefact ;
+semdcat:SemanticArtefactShape a sh:NodeShape ;
+  sh:targetClass semdcat:SemanticArtefact ;
   sh:property [
-    sh:path dct:title ;
+    sh:path semdcat:saTitle ;
+    sh:class: dct:title ;
     sh:nodeKind sh:Literal ;
     sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dct:license ;
-    sh:class: dct:LicenseDocument ;
-    sh:nodeKind sh:IRI ;
+    sh:path semdcat:saLicense ;
+    sh:class: dct:license ;
+    sh:nodeKind sh:IRIOrLiteral ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dct:identifier ;
+    sh:path semdcat:saIdentifier ;
+    sh:class dct:identifier ;
     sh:nodeKind sh:Literal ;
     sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dct:accessRights ;
-    sh:class: dct:RightsStatement ;
-    sh:nodeKind sh:IRI ;
+    sh:path semdcat:saAccessRights;
+    sh:class: dct:accessRights ;
+    sh:nodeKind sh:IRIOrLiteral ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dct:creator ;
-    sh:node :AgentShape ;
+    sh:path semdcat:saCreator ;
+    sh:class dct:creator ;
+    sh:node :AgentShape ; 
     sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
-    sh:path dct:created ;
+    sh:path semdcat:saCreated ;
+    sh:class dct:created;
+    sh:nodeKind: sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
+    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
-  ], [
-    sh:path dct:description ;
+  ] .
+
+semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
+  sh:targetClass semdcat:SemanticArtefactDistribution ;
+  sh:property [
+    sh:path semdcat:saDescription ;
+    sh:class dct:description ;
     sh:nodeKind sh:Literal ;
     sh:minCount 1 ;
     dash:editor dash:TextAreaEditor ;
-  ], [
-    sh:path dcat:contactPoint ;
-    sh:nodeKind sh:IRI ;
-    #sh:class vcard:Kind ;
-    sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path owl:versionIRI ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path dct:modified ;
-    sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    dash:editor dash:DatePickerEditor ;
-    dash:viewer dash:LiteralViewer ;
-  ],  [
-    sh:path dcat:keyword ;
-    sh:nodeKind sh:Literal ;
-    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
-    sh:path mod:acronym ;
-    sh:nodeKind sh:Literal ;
-    sh:minCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LiteralViewer ;
-  ], [
-    sh:path dcat:landingPage ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path dct:publisher ;
-    sh:node :AgentShape ;
+    sh:path semdcat:saContactPoint ;
+    sh:class dcat:contactPoint ;
+    sh:node :VCardShape ; 
     sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
-    sh:path dct:subject ;
-    sh:nodeKind sh:Literal ;
+    sh:path semdcat:saVersionIRI ;
+    sh:class owl:versionIRI;
+    sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
-    dash:editor dash:TextFiledEditor ;
+    sh:maxCount 1 ;
+    dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dc:type ;
+    sh:path semdcat:saModified ;
+    sh:class dct:modified ;
+    sh:nodeKind: sh:Literal ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    dash:editor dash:DatePickerEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ],  [
+    sh:path semdcat:saKeyword ;
+    sh:class dcat:keyword ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:saAcronym ;
+    sh:class mod:acronym ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:saLandingPage ;
+    sh:class dcat:landingPage ;
     sh:nodeKind sh:IRI ;
-    #sh:class rdfs:Class ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saPublisher ;
+    sh:class dct:publisher ;
+    sh:node :AgentShape ;
+    dash:editor dash:BlankNodeEditor ;
+  ], [
+    sh:path semdcat:saSubject ;
+    sh:class dct:subject ;
+    sh:nodeKind sh:IRIOrLiteral ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path dct:issued ;
+    sh:path semdcat:saType ;
+    sh:class dct:type ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saIssued ;
+    sh:class dct:issued ;
+    sh:nodeKind: sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ],  [
-    sh:path dcat:theme ;
+    sh:path semdcat:saTheme ;
+    sh:class dcat:theme ;
     sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saConformsTo ;
+    sh:class dct:conformsTo ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saLanguage ;
+    sh:class dct:language ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saURI ;
+    sh:class mod:URI ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saDistribution ;
+    sh:class dcat:distribution ;
+  ], [
+    sh:path semdcat:saContributor ;
+    sh:class dct:contributor ;
+    sh:node :AgentShape ; 
+    dash:editor dash:BlankNodeEditor ;
+  ], [
+    sh:path semdcat:saRights ;
+    sh:class dct:rights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saTemporal ;
+    sh:class dct:temporal ;
+    sh:node :PeriodOfTime ;
+  ], [
+    sh:path semdcat:saQualifiedRelation ;
+    sh:class dcat:qualifiedRelation ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saStatus ;
+    sh:class mod:status ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saHasPolicy ;
+    sh:class odrl:hasPolicy ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saQualifiedAttribution ;
+    sh:class prov:qualifiedAttribution ;
+    sh:node :AgentShape ; 
+    dash:editor dash:BlankNodeEditor ;
+  ], [
+    sh:path semdcat:saWasGeneratedBy ;
+    sh:class prov:wasGeneratedBy ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saRelation ;
+    sh:class dct:relation ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saIsReferencedBy ;
+    sh:class dct:isReferencedBy ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saIncludedInDataCatalog ;
+    sh:class schema:includedInDataCatalog ;
+    sh:nodeKind sh:IRI ; # Filled automatically
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saCompetencyQuestion ;
+    sh:class mod:competencyQuestion ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saAccrualPeriodicity ;
+    sh:class dct:accrualPeriodicity ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saSpatial ;
+    sh:class dct:spatial ;
+    sh:datatype xsd:decimal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saUsedEngineeringMethodology ;
+    sh:class mod:usedEngineeringMethodology ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saTemporalResolution ;
+    sh:class dcat:temporalResolution ;
+    sh:datatype xsd:duration ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saHasFormalityLevel ;
+    sh:class mod:hasFormalityLevel ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saSpatialResolutionInMeters ;
+    sh:class dcat:spatialResolutionInMeters ;
+    sh:datatype xsd:decimal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:saAccrualMethod ;
+    sh:class dct:accrualMethod ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadMediaType ;
+    sh:class dcat:mediaType ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadFormat ;
+    sh:class dct:format ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadTitle ;
+    sh:class dct:title ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadAccessURL ;
+    sh:class dcat:accessURL ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadHasRepresentationLanguage ;
+    sh:class mod:hasRepresentationLanguage ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadHasSyntax ;
+    sh:class mod:hasSyntax ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadAccessRights ;
+    sh:class dct:accessRights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    sh:minCount 1 ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadDownloadURL ;
+    sh:class dcat:downloadURL ;
+    sh:nodeKind sh:IRI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadRights ;
+    sh:class dct:rights ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadDescription ;
+    sh:class dct:description ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextAreaEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadIssued ;
+    sh:class dct:issued ;
+    sh:nodeKind: sh:Literal ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    dash:editor dash:DatePickerEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadModified ;
+    sh:class dct:modified ;
+    sh:nodeKind: sh:Literal ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    dash:editor dash:DatePickerEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadDefinitionProperty ;
+    sh:class mod:definitionProperty ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadAccessService ;
+    sh:class dcat:accessService ;
+    sh:nodeKind sh:IRI ; # Filled automatically
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadPackageFormat ;
+    sh:class dcat:packageFormat ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadConformsTo ;
+    sh:class dct:conformsTo ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadCreatedWith ;
+    sh:class pav:createdWith ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadPrefLabelProperty ;
+    sh:class mod:prefLabelProperty ;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadSynonymProperty ;
+    sh:class mod:synonymProperty ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadHasPolicy ;
+    sh:class odrl:hasPolicy ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadCompressFormat ;
+    sh:class dcat:compressFormat ;
+    sh:nodeKind sh:IRIOrLiteral ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadTemporalResolution ;
+    sh:class dcat:temporalResolution ;
+    sh:datatype xsd:duration ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadByteSize ;
+    sh:class dcat:byteSize ;
+    sh:datatype xsd:decimal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:sadSpatialResolutionInMeters ;
+    sh:class dcat:spatialResolutionInMeters ;
+    sh:datatype xsd:decimal ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ] .
 
@@ -132,7 +438,53 @@ mod:FsFSemanticArtefactShape a sh:NodeShape ;
   sh:property [
     sh:path foaf:name;
     sh:nodeKind sh:Literal ;
-    sh:minCount 1 ;
     sh:maxCount  1 ;
     dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path foaf:mbox;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path foaf:homepage;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] .
+
+:VCardShape a sh:NodeShape ;
+  sh:targetClass vcard:VCard ;
+  sh:property [
+    sh:path vcard:hasName;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path vcard:hasEmail;
+    sh:nodeKind sh:Literal ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] .
+
+  :PeriodOfTimeShape a sh:NodeShape ;
+    sh:targetClass dct:PeriodOfTime ;
+    sh:property [
+      sh:path dcat:startDate;
+      sh:nodeKind sh:Literal ;
+      sh:datatype xsd:dateTime ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      dash:editor dash:DatePickerEditor ;
+      dash:viewer dash:LiteralViewer ;
+    ], [
+      sh:path dcat:endDate;
+      sh:nodeKind sh:Literal ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      dash:editor dash:DatePickerEditor ;
+      dash:viewer dash:LiteralViewer ;
   ] .
