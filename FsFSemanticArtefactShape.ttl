@@ -442,28 +442,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dash:viewer dash:LabelViewer ;
   ] .
 
-:AgentShape a sh:NodeShape ;
-  sh:targetClass foaf:Agent ;
-  sh:property [
-    sh:path foaf:name;
-    sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path foaf:mbox;
-    sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path foaf:homepage;
-    sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
 :ContactPointShape a sh:NodeShape ;
   sh:targetClass semdcat:saContactPoint ;
   sh:property [
