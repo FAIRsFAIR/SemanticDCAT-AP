@@ -559,10 +559,10 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/semdcat#SemanticArtefact"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/temporal"/>
-        <semdcat:Endorsement rdf:resource="http://purl.org/semdcat#Optional"/>
+        <semdcat:Endorsement rdf:resource="http://purl.org/semdcat#Recommended"/>
         <rdfs:comment>semantic artefact temporal</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <rdfs:label>temporal</rdfs:label>
+        <rdfs:label>temporal coverage</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1043,6 +1043,32 @@
     
 
 
+    <!-- http://purl.org/semdcat#temporalEnd -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat#temporalEnd">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#endDate"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <rdfs:label>temporal coverage end</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat#temporalStart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat#temporalStart">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#startDate"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <rdfs:label>temporal coverage start</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1267,6 +1293,12 @@
     
 
 
+    <!-- http://www.w3.org/ns/dcat#endDate -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#endDate"/>
+    
+
+
     <!-- http://www.w3.org/ns/dcat#keyword -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#keyword"/>
@@ -1294,6 +1326,12 @@
     <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#startDate -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#startDate"/>
     
 
 
