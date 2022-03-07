@@ -62,11 +62,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
-  ] .
-
-semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
-  sh:targetClass semdcat:SemanticArtefactDistribution ;
-  sh:property [
+  ], [
     sh:path semdcat:saDescription ;
     sh:class dct:description ;
     sh:nodeKind sh:Literal ;
@@ -173,6 +169,8 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saDistribution ;
     sh:class dcat:distribution ;
+    sh:node :DistributionShape ; 
+    dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saContributor ;
     sh:class dct:contributor ;
@@ -284,7 +282,11 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
     sh:nodeKind sh:IRIOrLiteral ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
-  ], [
+  ] .
+
+semdcat:DistributionShape a sh:NodeShape ;
+  sh:targetClass semdcat:SemanticArtefactDistribution ;
+  sh:property [
     sh:path semdcat:sadMediaType ;
     sh:class dcat:mediaType ;
     sh:nodeKind sh:IRIOrLiteral ;
