@@ -50,7 +50,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saCreator ;
     sh:class dct:creator ;
-    sh:node :AgentShape ; 
+    sh:node :CreatorShape ; 
     sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
@@ -76,7 +76,7 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saContactPoint ;
     sh:class dcat:contactPoint ;
-    sh:node :VCardShape ; 
+    sh:node :ContactPointShape ; 
     sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
@@ -176,7 +176,7 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saContributor ;
     sh:class dct:contributor ;
-    sh:node :AgentShape ; 
+    sh:node :ContributorShape ; 
     dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saRights ;
@@ -187,7 +187,9 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saTemporal ;
     sh:class dct:temporal ;
-    sh:node :PeriodOfTime ;
+    sh:node :TemporalCoverageShape ; 
+    sh:minCount 1 ;
+    dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saQualifiedRelation ;
     sh:class dcat:qualifiedRelation ;
@@ -460,36 +462,69 @@ semdcat:SemanticArtefactDistributionShape a sh:NodeShape ;
     dash:viewer dash:LabelViewer ;
   ] .
 
-:VCardShape a sh:NodeShape ;
-  sh:targetClass vcard:VCard ;
+:ContactPointShape a sh:NodeShape ;
+  sh:targetClass semdcat:saContactPoint ;
   sh:property [
-    sh:path vcard:hasName;
+    sh:path semdcat:contactPointName ;
     sh:nodeKind sh:Literal ;
     sh:maxCount  1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
-    sh:path vcard:hasEmail;
+    sh:path semdcat:contactPointEmail;
     sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ] .
 
-  :PeriodOfTimeShape a sh:NodeShape ;
-    sh:targetClass dct:PeriodOfTime ;
-    sh:property [
-      sh:path dcat:startDate;
-      sh:nodeKind sh:Literal ;
-      sh:datatype xsd:dateTime ;
-      sh:minCount 1 ;
-      sh:maxCount 1 ;
-      dash:editor dash:DatePickerEditor ;
-      dash:viewer dash:LiteralViewer ;
-    ], [
-      sh:path dcat:endDate;
-      sh:nodeKind sh:Literal ;
-      sh:datatype xsd:dateTime ;
-      sh:maxCount 1 ;
-      dash:editor dash:DatePickerEditor ;
-      dash:viewer dash:LiteralViewer ;
+:CreatorShape a sh:NodeShape ;
+  sh:targetClass semdcat:saCreator ;
+  sh:property [
+    sh:path semdcat:creatorName ;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:creatorEmail;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
   ] .
+
+:ContributorShape a sh:NodeShape ;
+  sh:targetClass semdcat:saContributor ;
+  sh:property [
+    sh:path semdcat:contributorName ;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ], [
+    sh:path semdcat:contributorEmail;
+    sh:nodeKind sh:Literal ;
+    sh:maxCount  1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LabelViewer ;
+  ] .
+
+:TemporalCoverageShape a sh:NodeShape ;
+  sh:targetClass semdcat:saTemporal ;
+  sh:property [
+    sh:path semdcat:temporalStart ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:dateTime ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    dash:editor dash:DatePickerEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:temporalEnd ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    dash:editor dash:DatePickerEditor ;
+    dash:viewer dash:LiteralViewer ;
+] .
