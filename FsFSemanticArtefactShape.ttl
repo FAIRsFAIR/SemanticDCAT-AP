@@ -1,16 +1,16 @@
-@prefix :         <http://thisfile> .
-@prefix semdcat:  <http://purl.org/semdcat> .
-@prefix dash:     <http://datashapes.org/dash#> .
-@prefix dcat:     <http://www.w3.org/ns/dcat#> .
-@prefix dct:      <http://purl.org/dc/terms/> .
-@prefix sh:       <http://www.w3.org/ns/shacl#> .
-@prefix mod:      <https://w3id.org/mod> .
-@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
-@prefix obo:      <http://purl.obolibrary.org/obo/> .
-@prefix prov:     <https://www.w3.org/TR/prov-o/> .
-@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix :        <http://thisfile> .
+@prefix semdcat: <http://purl.org/semdcat> .
+@prefix dash:    <http://datashapes.org/dash#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix mod:     <https://w3id.org/mod> .
+@prefix odrl:    <http://www.w3.org/ns/odrl/2/> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix prov:    <https://www.w3.org/TR/prov-o/> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix pav:     <http://purl.org/pav/> .
@@ -21,14 +21,14 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   sh:targetClass semdcat:SemanticArtefact ;
   sh:property [
     sh:path semdcat:saTitle ;
-    sh:class: dct:title ;
+    sh:class dct:title ;
     sh:nodeKind sh:Literal ;
     sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:saLicense ;
-    sh:class: dct:license ;
+    sh:class dct:license ;
     sh:nodeKind sh:IRIOrLiteral ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
@@ -42,7 +42,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:saAccessRights;
-    sh:class: dct:accessRights ;
+    sh:class dct:accessRights ;
     sh:nodeKind sh:IRIOrLiteral ;
     sh:minCount 1 ;
     dash:editor dash:URIEditor ;
@@ -56,7 +56,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saCreated ;
     sh:class dct:created;
-    sh:nodeKind: sh:Literal ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -86,7 +86,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saModified ;
     sh:class dct:modified ;
-    sh:nodeKind: sh:Literal ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
@@ -135,7 +135,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saIssued ;
     sh:class dct:issued ;
-    sh:nodeKind: sh:Literal ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -356,7 +356,7 @@ semdcat:DistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:sadIssued ;
     sh:class dct:issued ;
-    sh:nodeKind: sh:Literal ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
@@ -364,7 +364,7 @@ semdcat:DistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:sadModified ;
     sh:class dct:modified ;
-    sh:nodeKind: sh:Literal ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
@@ -447,13 +447,13 @@ semdcat:DistributionShape a sh:NodeShape ;
   sh:property [
     sh:path semdcat:contactPointName ;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:contactPointEmail;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ] .
@@ -463,13 +463,13 @@ semdcat:DistributionShape a sh:NodeShape ;
   sh:property [
     sh:path semdcat:creatorName ;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:creatorEmail;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ] .
@@ -479,13 +479,13 @@ semdcat:DistributionShape a sh:NodeShape ;
   sh:property [
     sh:path semdcat:contributorName ;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:contributorEmail;
     sh:nodeKind sh:Literal ;
-    sh:maxCount  1 ;
+    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LabelViewer ;
   ] .
