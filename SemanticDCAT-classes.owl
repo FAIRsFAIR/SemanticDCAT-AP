@@ -136,8 +136,8 @@
     <owl:ObjectProperty rdf:about="http://purl.org/semdcat#publisherEmail">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/publisher"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <rdfs:label>publisher e-mail</rdfs:label>
     </owl:ObjectProperty>
@@ -149,7 +149,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/semdcat#publisherName">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/terms/publisher"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/name"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <rdfs:label>publisher name</rdfs:label>
@@ -490,9 +490,11 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/semdcat#saPublisher">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
-        <rdfs:range rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/publisher"/>
         <semdcat:Endorsement rdf:resource="http://purl.org/semdcat#Recommended"/>
         <rdfs:comment>semantic artefact publisher</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <rdfs:label>publisher</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1199,6 +1201,12 @@
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:Class rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/publisher"/>
     
 
 
