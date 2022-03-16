@@ -131,6 +131,32 @@
     
 
 
+    <!-- http://purl.org/semdcat#publisherEmail -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat#publisherEmail">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rdfs:label>publisher e-mail</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat#publisherName -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat#publisherName">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#saProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/semdcat#subProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <rdfs:label>publisher name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/semdcat#saAccessRights -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/semdcat#saAccessRights">
