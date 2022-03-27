@@ -21,27 +21,31 @@ semdcat:DistributionShape a sh:NodeShape ;
   sh:targetClass semdcat:SemanticArtefactDistribution ;
   sh:property [
     sh:path semdcat:sadMediaType ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadFormat ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadTitle ;
+    dc:title "media type" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadFormat ;
+    dc:title "format" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadTitle ;
+    dc:title "title" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadAccessURL ;
+    dc:title "access URL" ;
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
     sh:minCount 1 ;
@@ -49,44 +53,51 @@ semdcat:DistributionShape a sh:NodeShape ;
     dash:viewer dash:LabelViewer ;
   ], [
     sh:path semdcat:sadHasRepresentationLanguage ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "has representation language" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadHasSyntax ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "has syntax" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadAccessRights ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "access rights" ;
+    sh:nodeKind sh:Literal ;
     sh:minCount 1 ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadDownloadURL ;
+    dc:title "download URL" ;
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
     dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadRights ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "rights" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadDescription ;
+    dc:title "description" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     dash:editor dash:TextAreaEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadIssued ;
+    dc:title "issued" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
@@ -94,6 +105,7 @@ semdcat:DistributionShape a sh:NodeShape ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadModified ;
+    dc:title "modified" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
     sh:maxCount 1 ;
@@ -101,164 +113,87 @@ semdcat:DistributionShape a sh:NodeShape ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadDefinitionProperty ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadAccessService ;
-    sh:nodeKind sh:IRI ; # Filled automatically
-    sh:datatype xsd:anyURI ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadPackageFormat ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadConformsTo ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadCreatedWith ;
-    sh:nodeKind sh:IRIOrLiteral ;
-    sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:sadPrefLabelProperty ;
+    dc:title "definition property" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadAccessService ;
+    dc:title "access service" ;
+    sh:nodeKind sh:IRI ; # Filled automatically
+    sh:datatype xsd:anyURI ;
+    dash:editor dash:URIEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadPackageFormat ;
+    dc:title "package format" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadConformsTo ;
+    dc:title "conforms to" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadCreatedWith ;
+    dc:title "created with" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
+  ], [
+    sh:path semdcat:sadPrefLabelProperty ;
+    dc:title "preferred name" ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadSynonymProperty ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "synonym" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadHasPolicy ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "has policy" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadCompressFormat ;
-    sh:nodeKind sh:IRIOrLiteral ;
+    dc:title "compression format" ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:editor dash:TextFieldEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadTemporalResolution ;
+    dc:title "temporal resolution" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:duration ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadByteSize ;
+    dc:title "byte size" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:decimal ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadSpatialResolutionInMeters ;
+    dc:title "spatial resolution in meters" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:decimal ;
     dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
-:ContactPointShape a sh:NodeShape ;
-  sh:targetClass semdcat:saContactPoint ;
-  sh:property [
-    sh:path semdcat:contactPointName ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:contactPointEmail;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
-:CreatorShape a sh:NodeShape ;
-  sh:targetClass semdcat:saCreator ;
-  sh:property [
-    sh:path semdcat:creatorName ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:creatorEmail;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
-:PublisherShape a sh:NodeShape ;
-  sh:targetClass semdcat:saPublisher ;
-  sh:property [
-    sh:path semdcat:publisherName ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:publisherEmail;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
-:ContributorShape a sh:NodeShape ;
-  sh:targetClass semdcat:saContributor ;
-  sh:property [
-    sh:path semdcat:contributorName ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ], [
-    sh:path semdcat:contributorEmail;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    dash:editor dash:TextFieldEditor ;
-    dash:viewer dash:LabelViewer ;
-  ] .
-
-:TemporalCoverageShape a sh:NodeShape ;
-  sh:targetClass semdcat:saTemporal ;
-  sh:property [
-    sh:path semdcat:temporalStart ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
-  ], [
-    sh:path semdcat:temporalEnd ;
-    sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
-    dash:editor dash:DatePickerEditor ;
-    dash:viewer dash:LiteralViewer ;
-] .
+  ] .
+
