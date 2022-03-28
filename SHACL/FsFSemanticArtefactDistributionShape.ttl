@@ -43,10 +43,10 @@ semdcat:DistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:sadAccessURL ;
     dc:title "access URL" ;
-    sh:nodeKind sh:IRI ;
-    sh:datatype xsd:anyURI ;
-    dash:editor dash:URIEditor ;
-    dash:viewer dash:LabelViewer ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextAreaEditor ;
+    dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadHasRepresentationLanguage ;
     dc:title "has representation language" ;
@@ -70,9 +70,9 @@ semdcat:DistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:sadDownloadURL ;
     dc:title "download URL" ;
-    sh:nodeKind sh:IRI ;
-    sh:datatype xsd:anyURI ;
-    dash:editor dash:URIEditor ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextAreaEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadRights ;
@@ -112,9 +112,9 @@ semdcat:DistributionShape a sh:NodeShape ;
   ], [
     sh:path semdcat:sadAccessService ;
     dc:title "access service" ;
-    sh:nodeKind sh:IRI ; # Filled automatically
-    sh:datatype xsd:anyURI ;
-    dash:editor dash:URIEditor ;
+    sh:nodeKind sh:Literal ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextAreaEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadPackageFormat ;
