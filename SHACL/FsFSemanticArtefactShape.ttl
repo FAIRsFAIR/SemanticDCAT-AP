@@ -24,7 +24,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "title" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -32,7 +31,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "license" ; 
     sh:nodeKind sh: ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -40,7 +38,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "identifier" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -48,22 +45,18 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "access rights" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:saCreator ;
     dc:title "creator" ; 
     sh:node :CreatorShape ; 
-    sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saCreated ;
     dc:title "created" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -71,22 +64,18 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "description" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextAreaEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:saContactPoint ;
     dc:title "contact point" ; 
     sh:node :ContactPointShape ; 
-    sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saVersionIRI ;
     dc:title "version IRI" ; 
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
@@ -94,8 +83,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "modified" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ],  [
@@ -110,7 +97,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "acronym" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -118,8 +104,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "landing page" ; 
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -132,7 +116,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "subject" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -140,7 +123,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "type IRI" ; 
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
-    sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
@@ -148,8 +130,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "issued" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ],  [
@@ -157,7 +137,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "theme IRI" ; 
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
-    sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
@@ -197,7 +176,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:path semdcat:saTemporal ;
     dc:title "temporal coverage" ; 
     sh:node :TemporalCoverageShape ; 
-    sh:minCount 1 ;
     dash:editor dash:BlankNodeEditor ;
   ], [
     sh:path semdcat:saQualifiedRelation ;
@@ -319,7 +297,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "contact point name" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -327,7 +304,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "contact point e-mail" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ] .
@@ -339,7 +315,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "creator name" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -347,7 +322,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "creator e-mail" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ] .
@@ -359,7 +333,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "publisher name" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -367,7 +340,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "publisher e-mail" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ] .
@@ -379,7 +351,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "contributor name" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -387,7 +358,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "contributor e-mail" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:maxCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ] .
@@ -399,8 +369,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "temporal coverage start" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -408,7 +376,6 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     dc:title "temporal coverage end" ; 
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
 ] .

@@ -24,7 +24,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "media type" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -32,7 +31,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "format" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -40,7 +38,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "title" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -48,7 +45,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "access URL" ;
     sh:nodeKind sh:IRI ;
     sh:datatype xsd:anyURI ;
-    sh:minCount 1 ;
     dash:editor dash:URIEditor ;
     dash:viewer dash:LabelViewer ;
   ], [
@@ -56,7 +52,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "has representation language" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -64,14 +59,12 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "has syntax" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadAccessRights ;
     dc:title "access rights" ;
     sh:nodeKind sh:Literal ;
-    sh:minCount 1 ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -100,7 +93,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "issued" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
@@ -108,7 +100,6 @@ semdcat:DistributionShape a sh:NodeShape ;
     dc:title "modified" ;
     sh:nodeKind sh:Literal ;
     sh:datatype xsd:dateTime ;
-    sh:maxCount 1 ;
     dash:editor dash:DatePickerEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
