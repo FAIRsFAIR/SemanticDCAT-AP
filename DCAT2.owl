@@ -68,7 +68,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#contactPoint">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#contactPoint"/>
         <rdfs:label xml:lang="en">contact point</rdfs:label>
         <skos:definition xml:lang="en">Relevant contact information for the cataloged resource. Use of vCard is recommended [VCARD-RDF].</skos:definition>
@@ -198,7 +198,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#description">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/description"/>
         <rdfs:label xml:lang="en">description</rdfs:label>
         <skos:definition xml:lang="en">A free-text account of the item.</skos:definition>
@@ -235,7 +235,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#hasPolicy">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="https://www.w3.org/TR/odrl-vocab/#term-hasPolicy"/>
         <rdfs:label xml:lang="en">has policy</rdfs:label>
         <skos:definition xml:lang="en">An ODRL conformant policy expressing the rights associated with the resource.</skos:definition>
@@ -260,7 +260,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#identifier">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/identifier"/>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
         <skos:definition xml:lang="en">A unique identifier of the item.</skos:definition>
@@ -273,7 +273,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#isReferencedBy">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
         <rdfs:label xml:lang="en">is referenced by</rdfs:label>
         <skos:definition xml:lang="en">A related resource, such as a publication, that references, cites, or otherwise points to the cataloged resource.</skos:definition>
@@ -286,7 +286,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#language">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
         <rdfs:label xml:lang="en">language</rdfs:label>
         <skos:definition xml:lang="en">A language of the item. This refers to the natural language used for textual metadata (i.e. titles, descriptions, etc) of a cataloged resource (i.e. dataset or service) or the textual values of a dataset distribution</skos:definition>
@@ -299,7 +299,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#license">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/license"/>
         <rdfs:label xml:lang="en">license</rdfs:label>
         <skos:definition xml:lang="en">A legal document under which the resource is made available.</skos:definition>
@@ -324,7 +324,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#publisher">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/publisher"/>
         <rdfs:label xml:lang="en">publisher</rdfs:label>
         <skos:definition xml:lang="en">The entity responsible for making the item available.</skos:definition>
@@ -363,7 +363,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#reConformsTo">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/conformsTo"/>
         <rdfs:label xml:lang="en">conforms to</rdfs:label>
         <skos:definition xml:lang="en">An established standard to which the described resource conforms.</skos:definition>
@@ -376,7 +376,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#reModified">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/modified"/>
         <rdfs:label xml:lang="en">update/modification date</rdfs:label>
         <skos:definition xml:lang="en">Most recent date on which the item was changed, updated or modified.</skos:definition>
@@ -389,7 +389,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#reRights">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/rights"/>
         <rdfs:label xml:lang="en">rights</rdfs:label>
         <skos:definition xml:lang="en">A statement that concerns all rights not addressed with dct:license or dct:accessRights, such as copyright statements.</skos:definition>
@@ -402,7 +402,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#reTitle">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/title"/>
         <rdfs:label xml:lang="en">title</rdfs:label>
         <skos:definition xml:lang="en">A name given to the item.</skos:definition>
@@ -415,7 +415,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#releaseDate">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/issued"/>
         <rdfs:label xml:lang="en">release date</rdfs:label>
         <skos:definition xml:lang="en">Date of formal issuance (e.g., publication) of the item.</skos:definition>
@@ -428,7 +428,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#resourceCreator">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/creator"/>
         <rdfs:label xml:lang="en">resource creator</rdfs:label>
         <skos:definition xml:lang="en">The entity responsible for producing the resource.</skos:definition>
@@ -450,7 +450,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#theme">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#theme"/>
         <rdfs:label xml:lang="en">theme</rdfs:label>
         <skos:definition xml:lang="en">A main category of the resource. A resource can have multiple themes.</skos:definition>
@@ -475,11 +475,17 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dcat2#type">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#resourceObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/type"/>
         <rdfs:label xml:lang="en">type/genre</rdfs:label>
         <skos:definition xml:lang="en">The nature or genre of the resource.</skos:definition>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/mrowl#subProperty -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/mrowl#subProperty"/>
     
 
 
@@ -503,7 +509,7 @@
 
     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#landingPage">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dcat2#catalogObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     </rdf:Description>
     
 
