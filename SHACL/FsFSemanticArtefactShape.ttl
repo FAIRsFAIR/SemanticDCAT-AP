@@ -29,7 +29,7 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
   ], [
     sh:path semdcat:saLicense ;
     dc:title "license" ; 
-    sh:nodeKind sh: ;
+    sh:nodeKind sh:Literal ;
     sh:datatype xsd:string ;
     dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
