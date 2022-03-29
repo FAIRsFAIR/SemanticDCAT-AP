@@ -56,8 +56,8 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:path semdcat:saCreated ;
     dc:title "created" ; 
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:saDescription ;
@@ -82,8 +82,8 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:path semdcat:saModified ;
     dc:title "modified" ; 
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ],  [
     sh:path semdcat:saKeyword ;
@@ -129,8 +129,8 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:path semdcat:saIssued ;
     dc:title "issued" ; 
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ],  [
     sh:path semdcat:saTheme ;
@@ -369,14 +369,14 @@ semdcat:SemanticArtefactShape a sh:NodeShape ;
     sh:path semdcat:temporalStart ;
     dc:title "temporal coverage start" ; 
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:temporalEnd ;
     dc:title "temporal coverage end" ; 
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
 ] .

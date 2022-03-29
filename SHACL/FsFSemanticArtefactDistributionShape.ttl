@@ -92,15 +92,15 @@ semdcat:DistributionShape a sh:NodeShape ;
     sh:path semdcat:sadIssued ;
     dc:title "issued" ;
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadModified ;
     dc:title "modified" ;
     sh:nodeKind sh:Literal ;
-    sh:datatype xsd:dateTime ;
-    dash:editor dash:DatePickerEditor ;
+    sh:datatype xsd:string ;
+    dash:editor dash:TextFieldEditor ;
     dash:viewer dash:LiteralViewer ;
   ], [
     sh:path semdcat:sadDefinitionProperty ;
