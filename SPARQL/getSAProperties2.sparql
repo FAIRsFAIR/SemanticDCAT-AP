@@ -1,0 +1,22 @@
+PREFIX semdcat2: <http://purl.org/semdcat/semdcat2#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?property ?label ?endorsement ?range
+WHERE {
+  values ?propertyType { owl:DatatypeProperty owl:ObjectProperty owl:AnnotationProperty}
+  ?property a ?propertyType ;
+    rdfs:domain semdcat2:SemanticArtefact .
+  OPTIONAL {
+    ?property rdfs:label ?label .
+    FILTER(lang(?label) = "" || lang(?label) = "en") .
+  } .
+  OPTIONAL {
+    ?property semdcat2:endorsement ?endorsement .
+  } .
+  OPTIONAL {
+    ?property rdfs:range ?range .
+  } .
+}
+     
+ 

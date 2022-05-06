@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rob/ontologies/2022/4/untitled-ontology-80#"
+     xml:base="http://www.semanticweb.org/rob/ontologies/2022/4/untitled-ontology-80"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:semdcat2="http://purl.org/semdcat/semdcat2#">
+    <owl:Ontology rdf:about="http://purl.org/semdcat/semdcat2">
+        <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:imports rdf:resource="https://w3id.org/mod/2.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#endorsement -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/semdcat/semdcat2#endorsement"/>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saDescription -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/semdcat/semdcat2#saDescription">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>description</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:range rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saTitle -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/semdcat/semdcat2#saTitle">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>title</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadDescription -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/semdcat/semdcat2#sadDescription">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>description</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        <rdfs:range rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadTitle -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/semdcat/semdcat2#sadTitle">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>title</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/Relation -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/Relation">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/accessRights">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualMethod -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/accrualMethod">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/isReferencedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/temporal">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/pav/createdWith -->
+
+    <rdf:Description rdf:about="http://purl.org/pav/createdWith">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saAccessRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#saAccessRights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/accessRights"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <rdfs:comment rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>access rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saConformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#saConformsTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saHasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#saHasPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+        <rdfs:label>has policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#saRights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadAccessRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#sadAccessRights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/accessRights"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <rdfs:comment rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>access rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadConformsTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#sadConformsTo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadHasPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#sadHasPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>has policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadRights -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/semdcat/semdcat2#sadRights">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/distribution -->
+
+    <rdf:Description rdf:about="http://schema.org/distribution">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/includedInDataCatalog -->
+
+    <rdf:Description rdf:about="http://schema.org/includedInDataCatalog">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessSerive -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessSerive">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <rdfs:label rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#compressFormat -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#compressFormat">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#keyword">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#landingPage">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#mediaType">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#packageFormat -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#packageFormat">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <rdfs:label rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#qualifiedRelation -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#qualifiedRelation">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#theme">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#qualifiedAttribution -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#qualifiedAttribution">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#usedEngineeringMethodology -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#usedEngineeringMethodology">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saIssued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#saIssued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/issued"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>date issued</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saModified -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#saModified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/modified"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+        <rdfs:label>date modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#saSpatialResolutionInMeters -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#saSpatialResolutionInMeters">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+        <rdfs:label>spatial resolution in meters</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadIssued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#sadIssued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/issued"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>date issued</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadModified -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#sadModified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/modified"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+        <rdfs:label>date modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#sadSpatialResolutionInMeters -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/semdcat/semdcat2#sadSpatialResolutionInMeters">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+        <rdfs:label>spatial resolution in meters</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#byteSize">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#temporalResolution -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#acronym -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#acronym">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#competencyQuestion -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#competencyQuestion">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Optional"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#definitionProperty -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#definitionProperty">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#hasRepresentationLanguage -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#hasRepresentationLanguage">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#hasSyntax -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#hasSyntax">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Mandatory"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#prefLabelPropert -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#prefLabelPropert">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#status -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#status">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefact"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/mod#synonymProperty -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#synonymProperty">
+        <rdfs:domain rdf:resource="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution"/>
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#Endorsement -->
+
+    <owl:Class rdf:about="http://purl.org/semdcat/semdcat2#Endorsement"/>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#SemanticArtefact -->
+
+    <owl:Class rdf:about="http://purl.org/semdcat/semdcat2#SemanticArtefact">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:label>Semantic Artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution -->
+
+    <owl:Class rdf:about="http://purl.org/semdcat/semdcat2#SemanticArtefactDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:label>Semantic Artefact Distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#Mandatory -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/semdcat/semdcat2#Mandatory">
+        <rdf:type rdf:resource="http://purl.org/semdcat/semdcat2#Endorsement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#Optional -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/semdcat/semdcat2#Optional">
+        <rdf:type rdf:resource="http://purl.org/semdcat/semdcat2#Endorsement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/semdcat/semdcat2#Recommended -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/semdcat/semdcat2#Recommended">
+        <rdf:type rdf:resource="http://purl.org/semdcat/semdcat2#Endorsement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/mod#hasFormalityLevel">
+        <semdcat2:endorsement rdf:resource="http://purl.org/semdcat/semdcat2#Recommended"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
